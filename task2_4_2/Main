@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введите сумму вклада: ");
+        double sum = in.nextDouble();
+        System.out.println("Сумма вклада: "+sum+ " рублей.");
+        System.out.print("Введите процент вклада: ");
+        float persent = in.nextFloat()/100;
+        System.out.println("Процент вклада: "+ persent*100 + '%');
+        System.out.print("Введите срок вклада: ");
+        float term = in.nextFloat();
+        System.out.println("Срок вклада: "+ term+" лет");
+        for (int i = 1; i < term+1; i++) {
+            sum += sum * persent;
+            System.out.println("Сумма вклада по окончании " + i + "-го года: "+sum+" рублей.");
+        }
+    }
+}
+
+/*Програма выводит данные с,т.н., "накопительными процентми" на каждый год на любой срок.*/
