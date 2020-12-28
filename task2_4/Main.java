@@ -8,18 +8,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите сумму вклада: ");
-        int a = scanner.nextInt();
-        System.out.print("Сумма вклада: " + a + " рублей.");
-        System.out.println(" ");
+        int sum = scanner.nextInt();
+        System.out.print("Сумма вклада: " + sum + " рублей.\n");
         System.out.print("Введите процент вклада: ");
-        int b = scanner.nextInt();
-        System.out.println("Процент вклада: " + b + " "+'%');
+        float persent = scanner.nextFloat()/100;
+        System.out.println("Процент вклада: " + persent*100 + " "+'%');
         System.out.print("введите кол-во лет вклада: ");
-        int d = scanner.nextInt();
-        System.out.println("Кол-во лет вклада: " + d );
-        double c = a/100*(b*d)+a;
-        System.out.println("Сумма в конце срока: " + c) ;
-        
+        int term = scanner.nextInt();
+        System.out.println("Кол-во лет вклада: " + term );
+        double sumFinal = (sum*persent)*term + sum;
+        System.out.println("Сумма в конце срока: " + sumFinal) ;
+
     }
 }
 /* это решение верно для вклада с процентами без т.н., "капитализации". */
